@@ -8,9 +8,18 @@ using std::endl;
 
 #include <iomanip>
 
+#include<math.h>
+
 using std::setw;
 
+//Funcion para la piramide
 void Pyramid(int);
+
+//Funcion logaritmica
+void ln(int);
+
+//FUncion FOrmula
+void funcionf();
 
 int main(){
 
@@ -54,14 +63,17 @@ int main(){
 				int numero_l;
 				cout<< "Ingrese el numero a ver su logaritmo: "<< endl;
 				cin>>numero_l;
-							
+				ln(numero_l);		
+				cout<< "Ha terminado la ejecucion";						
 			}
 			break;
 
 			case 3:
 			//Funcion
 			{
-
+				cout<<"Ha ingresado a la formula y = m(sqrt(x))"<<endl;
+				funcionf();
+				cout<<"Ha finalizado"<< endl;
 			}
 			break;
 			
@@ -71,6 +83,31 @@ int main(){
 	}
 	return 0;
 }
+
+
+void funcionf(){
+	double y=0;
+	double precision=0;
+	double m=0;
+	double x=0;
+	double p2=0;
+	cout<<"Ingrese el numero y: " << endl;
+	cin>>y;
+	cout<<"Ingrese el numero de precision: " << endl;
+	cin>>precision;
+	cout<<"Ingrese el numero m: " << endl;
+	cin>>m;
+	p2 = precision;
+	while(x<y){
+		cout<< "La aproximacion de p: " << precision << " resulta: ";
+		x=(m*(sqrt(precision)));
+		cout<< x << endl;
+		precision= precision + p2;
+	}
+	cout<< "EL numero x es = " << x << endl;
+
+}
+
 
 void Pyramid(int number){
 	int numero=number;
@@ -100,8 +137,17 @@ void Pyramid(int number){
 				posicion2 = posicion2 +1;
 			}
 		}
+		
+		for(int k=0; k<mitad; k++){
+			cout<< " ";
+		}
 		cout<<endl;
 	
 	}
+
+}
+
+void ln(int numero){
+	
 
 }
