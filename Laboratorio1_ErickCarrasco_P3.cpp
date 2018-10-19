@@ -77,6 +77,12 @@ int main(){
 			}
 			break;
 			
+			case 4:
+			{
+				cout<< "reading data..."
+			}
+			break;
+			
 		}
 		cout<<"Desea continuar? "<< endl<< "1/ Si "<< endl<< "2/ No" << endl;
 		cin >> validacion;
