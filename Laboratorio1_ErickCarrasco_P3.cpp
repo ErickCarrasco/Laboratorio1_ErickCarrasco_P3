@@ -121,33 +121,57 @@ void Pyramid(int number){
 	int posicion2=0;
 	//Inicio de Construccion de piramide
 	for(int i=0; i < x; i++){
-		for(int j =0; j<y; j++){
-			if(i<= x/2){
-				cout<<" ";
-				if(j==mitad){
-					cout<<"*";
-				}
-				if(j== (mitad+posicion1)){
-						cout<<"*";
-					}
-				if(j==(mitad-posicion2)){
-					cout<<"*";
-				}
-				posicion1 = posicion1 +1;
-				posicion2 = posicion2 +1;
-			}
-		}
 		
-		for(int k=0; k<mitad; k++){
-			cout<< " ";
-		}
-		cout<<endl;
+		if(i<x/2){
+				
+			for(int k=mitad; k>mitad - posicion1; k--){
+				cout<< "*";
+			}
+			
+			for(int j =mitad; j<mitad + posicion2; j++){
+				cout<<"*";
+			}
+			cout<<endl;
 	
+		}
 	}
 
 }
 
 void ln(int numero){
+	int y=0;
+	y=numero;
+	int dividor=1;
+	int count2=1;
+	int counter=0;
+	while(y>10){
+		y=y/10;
+		
+		if(y>10){
+			dividor=dividor*10;
+			count2=count2*10;
+		
+		}
+		if(y<10){
+			dividor= dividor*1;
+			count2=count2*10;
+		}
+		counter = counter +1;
+		
+		
+	}
+	cout<< "Numero 1: " << dividor<<endl;
+	cout<< "Numero 2: " << count2<< endl;
+
+	int ver2 = numero;
+	ver2 = ver2/dividor;
+	cout<< "DIvision redondear: " << ver2<< endl;
+	ver2= ver2*dividor;
+	cout<< "Redondeado: " << ver2 << endl;
+	double ver3 = ver2;
+	double logaritmo=ver3/count2;
+	cout<<"EL logaritmo: "<< logaritmo<<endl;
+
 	
 
 }
