@@ -4,6 +4,8 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+#include <string>
+
 #include <iomanip>
 
 using std::setw;
@@ -35,7 +37,7 @@ int main(){
 			//Pyramid
 			{
 				cout<<"Bienvenido a la Piramide" <<endl;
-				int size;
+				int size=0;
 				cout<<"Ingrese un numero: " << endl;
 				cin>>size;
 				Pyramid(size);
@@ -48,7 +50,11 @@ int main(){
 			case 2:
 			//Logaritmos
 			{
-			
+				cout<< "Bienvenido al calculo de logaritmos"<< endl;
+				int numero_l;
+				cout<< "Ingrese el numero a ver su logaritmo: "<< endl;
+				cin>>numero_l;
+							
 			}
 			break;
 
@@ -60,22 +66,42 @@ int main(){
 			break;
 			
 		}
+		cout<<"Desea continuar? "<< endl<< "1/ Si "<< endl<< "2/ No" << endl;
+		cin >> validacion;
 	}
 	return 0;
 }
 
 void Pyramid(int number){
-	int x = 2(number+1);
-	int y = (2*x)-1;
-
+	int numero=number;
+	int x = numero+1;
+	x= 2*x;
+	cout<< x << endl;
+	int y= (2*x)-1;
+	cout<< y << endl;
+	int mitad = (y/2)+1;
+	int posicion1=0;
+	int posicion2=0;
 	//Inicio de Construccion de piramide
-
-	for(int i=1; i <= x; i++){
-		for(int j =1; j<=y; j++){
-			if(i== x/2){
-				
+	for(int i=0; i < x; i++){
+		for(int j =0; j<y; j++){
+			if(i<= x/2){
+				cout<<" ";
+				if(j==mitad){
+					cout<<"*";
+				}
+				if(j== (mitad+posicion1)){
+						cout<<"*";
+					}
+				if(j==(mitad-posicion2)){
+					cout<<"*";
+				}
+				posicion1 = posicion1 +1;
+				posicion2 = posicion2 +1;
 			}
 		}
+		cout<<endl;
+	
 	}
 
 }
