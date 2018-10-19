@@ -177,17 +177,21 @@ void ln(int numero){
 
 	double suma=0;
 	double resultado=0;
-	cout<< "Log("<<numero<<") = ";
+	cout<< "Ln("<<numero<<") = ";
+
+	//Log 10
 	for(int i =0; i< counter; i++){
-		suma =suma+ log (10);
+		suma =suma+ log(10);
+		
+		
 		cout<<"log(10) + ";
 	}
 
+
 	int contadorlogs2=0;
+	//Contador de la division de logaritmos
 	while(logaritmo>1.3){
 		logaritmo = logaritmo/2;
-		cout<< "Log("<<logaritmo<<")";
-		cout<<" + ";
 		contadorlogs2 = contadorlogs2 +1; 
 	}
 	double suma2=0;
