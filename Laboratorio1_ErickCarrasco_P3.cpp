@@ -172,6 +172,31 @@ void ln(int numero){
 	double logaritmo=ver3/count2;
 	cout<<"EL logaritmo: "<< logaritmo<<endl;
 
-	
+	cout<< endl;
+	cout<< endl;
 
+	double suma=0;
+	double resultado=0;
+	cout<< "Log("<<numero<<") = ";
+	for(int i =0; i< counter; i++){
+		suma =suma+ log (10);
+		cout<<"log(10) + ";
+	}
+
+	int contadorlogs2=0;
+	while(logaritmo>1.3){
+		logaritmo = logaritmo/2;
+		cout<< "Log("<<logaritmo<<")";
+		cout<<" + ";
+		contadorlogs2 = contadorlogs2 +1; 
+	}
+	double suma2=0;
+	for(int j=0; j<contadorlogs2; j++){
+		suma2 = suma2 + log(2);
+		cout<< "Log(2) + ";
+	}
+	cout << "Log(" << logaritmo << ")";
+	resultado = suma + suma2 + log(logaritmo);
+	cout<< endl;
+	cout<<"Resultado: " << resultado<< endl;
 }
